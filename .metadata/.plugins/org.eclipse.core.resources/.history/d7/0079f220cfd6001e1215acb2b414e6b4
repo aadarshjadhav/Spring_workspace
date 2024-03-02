@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="c_obj" class="com.autowirestatecitydemo.City"></bean>  <!--The beaan id p should be samme has object name inside Bag class, if you are using "byName" -->
+
+<bean id="states" class="com.autowirestatecitydemo.State" autowire="byName"></bean> 
+
+
+
+</beans>

@@ -1,0 +1,9 @@
+package com.departmentsetters;
+
+public class Department {
+	
+	int depart_id;
+	String depart_name;
+	String depart_location;
+
+}

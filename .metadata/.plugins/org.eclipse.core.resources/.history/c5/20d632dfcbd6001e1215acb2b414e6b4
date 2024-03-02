@@ -1,0 +1,8 @@
+package com.autowirestatecitydemo;
+
+public class City {
+	
+	String cityname;
+	
+
+}

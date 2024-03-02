@@ -1,0 +1,37 @@
+package com.autowirestatecitydemo;
+
+import com.autowiredemo.Pen;
+
+public class State {
+	
+	String statename;
+	
+	City c;
+	
+	public State(City c)
+	{
+		System.out.println("This is State parameterized constructor for c");
+		this.c=c;
+	}
+	
+	public State() {
+		
+		System.out.println("This is State constructor");
+	}
+	
+	public void setP(City c)
+	{
+		this.c=c;
+	}
+	
+	public City getC()
+	{
+		return c;
+	}
+	
+	public void printStateDisplay()
+	{
+		System.out.println("City is iniside the State. This is printStateDisplay()");
+	}
+
+}

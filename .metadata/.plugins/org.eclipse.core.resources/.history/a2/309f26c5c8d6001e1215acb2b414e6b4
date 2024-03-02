@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<!-- <bean id="p" class="com.autowiredemo.Pen"></bean>-->  <!--The beaan id p should be samme has object name inside Bag class, if you are using "byName" -->
+
+<!-- <bean id="b" class="com.autowiredemo.Bag" autowire="byName"></bean> -->
+
+
+<bean id="p1" class="com.autowiredemo.Pen"></bean>			<!--The bean id p1 is different from object name inside Bag class, you can use "byType" -->
+<bean id="b" class="com.autowiredemo.Bag" autowire="byType"></bean>
+
+
+
+</beans>

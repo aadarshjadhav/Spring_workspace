@@ -1,0 +1,28 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="b" class="com.bagsp.Nib">
+<constructor-arg value="Metal"></constructor-arg>
+<constructor-arg value="3"></constructor-arg>
+
+</bean>
+
+<bean id="a" class="com.bagsp.Pen">
+<constructor-arg value="Blue"></constructor-arg>
+<constructor-arg value="10"></constructor-arg>
+<constructor-arg><ref bean="b" /></constructor-arg>
+
+
+</bean>
+
+<bean id="car" class="com.bagsp.Bag">
+
+
+<constructor-arg value="Louis Vuton"></constructor-arg>
+<constructor-arg value="200000"></constructor-arg>
+<constructor-arg><ref bean="a"/></constructor-arg>
+</bean>
+
+</beans>

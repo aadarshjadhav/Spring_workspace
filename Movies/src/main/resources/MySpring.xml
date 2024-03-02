@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean  id="movie_bean" class="com.movies.Movie">
+
+<property name="movie_id"> <value>10001</value></property>
+<property name="movie_name"><value>Bhag Suraj Bhag</value></property>
+<property name="price"><value>150</value></property>
+<property name="producer_name"><value>Aatma Ram</value></property>
+<property name="release_date"><value>20-04-2024</value></property>
+</bean>
+
+
+
+</beans>

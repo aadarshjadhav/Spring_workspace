@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean  id="emp_bean" class="com.departmentsetters.Employee">
+
+<property name="emp_id"> <value>777</value></property>
+<property name="emp_name"><value>Suraj Bhagban</value></property>
+<property name="salary"><value>27000</value></property>
+
+</bean>
+
+<bean  id="department_bean" class="com.departmentsetters.Department">
+
+<property name="depart_id"> <value>777</value></property>
+<property name="depart_name"><value>Suraj Bhagban</value></property>
+<property name="depart_location"><value>27000</value></property>
+<constructor-arg><ref bean="emp_bean" /></constructor-arg>
+
+</bean>
+
+
+</beans>
+

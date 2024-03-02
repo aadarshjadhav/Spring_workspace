@@ -1,0 +1,7 @@
+package com.autowirestatecitydemo;
+
+public class State {
+	
+	String statename;
+
+}

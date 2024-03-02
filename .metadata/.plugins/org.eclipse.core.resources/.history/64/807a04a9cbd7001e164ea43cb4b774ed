@@ -1,0 +1,21 @@
+package com.annotationsqualifiers;
+
+public class Department {
+
+
+	@Autowired
+	@Qualifier("emp2")
+	Employee emp;
+	
+	public Department()
+	{
+		System.out.println("Inside Dempartment");
+	}
+	public void print()
+	{
+		System.out.println(emp.getId()+"  "+emp.getName());
+	}
+	
+
+
+}

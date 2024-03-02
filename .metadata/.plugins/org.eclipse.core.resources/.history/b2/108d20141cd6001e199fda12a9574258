@@ -1,0 +1,12 @@
+package com.movies;
+
+public class Movie {
+	
+	int movie_id;
+	String movie_name;
+	double price;
+	String producer_name;
+	String release_date;
+	
+
+}

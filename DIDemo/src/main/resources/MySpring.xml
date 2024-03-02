@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean id="emp" class="com.DItest.Employee">
+<constructor-arg value="577" type="int"> </constructor-arg> 
+<constructor-arg value="Aadarsh"></constructor-arg>
+<constructor-arg value="70000" type="int"></constructor-arg>
+
+
+
+
+
+</bean>
+
+
+</beans>

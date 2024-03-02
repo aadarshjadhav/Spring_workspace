@@ -1,0 +1,9 @@
+package com.departmentsetters;
+
+public class Employees {
+	
+	int emp_id;
+	String emp_name;
+	double salary;
+
+}

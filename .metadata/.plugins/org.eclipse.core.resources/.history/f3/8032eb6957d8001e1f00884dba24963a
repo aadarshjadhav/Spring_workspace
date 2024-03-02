@@ -1,0 +1,9 @@
+package com.person;
+
+public class Person {
+	
+	private int per_id;
+	private String per_name;
+	private String per_emailid;
+
+}
