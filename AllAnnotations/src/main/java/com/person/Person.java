@@ -14,8 +14,7 @@ public class Person {
 	{
 		
 	}
-	
-	
+
 	
 	public int getPer_id() {
 		return per_id;

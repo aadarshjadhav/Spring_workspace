@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+   <servlet>
+  	<servlet-name>MyWebInitializer</servlet-name>
+  	<display-name>MyWebInitializer</display-name>
+  	<description></description>
+  	<servlet-class>com.config.MyWebInitializer</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MvcConfiguration</servlet-name>
+  	<display-name>MvcConfiguration</display-name>
+  	<description></description>
+  	<servlet-class>com.config.MvcConfiguration</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MyController</servlet-name>
+  	<display-name>MyController</display-name>
+  	<description></description>
+  	<servlet-class>com.config.MyController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MyWebInitializer</servlet-name>
+  	<url-pattern>/MyWebInitializer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MvcConfiguration</servlet-name>
+  	<url-pattern>/MvcConfiguration</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MyController</servlet-name>
+  	<url-pattern>/MyController</url-pattern>
+  </servlet-mapping>
+</web-app>

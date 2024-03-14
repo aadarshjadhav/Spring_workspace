@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Spring_workspace"/>
+			<item value="D:\Spring_workspace\CustomerSpringMVC"/>
 			<item value="D:\Spring_workspace\TextEditor"/>
 			<item value="D:\Spring_workspace\AutowireStateCity"/>
 			<item value="D:\Spring_workspace\AutowireDemo"/>
@@ -34,15 +36,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="FirstMVCDemo1.MVCExample"/>
-			<item value="com"/>
+			<item value="com.CrudCustomerSpringMVC"/>
+			<item value="com.CustomerCrudSpringMVC"/>
 		</list>
 		<list key="groupId">
-			<item value="FirstMVCDemo1"/>
 			<item value="com"/>
 		</list>
 		<list key="artifactId">
-			<item value="MVCExample"/>
+			<item value="CrudCustomerSpringMVC"/>
+			<item value="CustomerCrudSpringMVC"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
