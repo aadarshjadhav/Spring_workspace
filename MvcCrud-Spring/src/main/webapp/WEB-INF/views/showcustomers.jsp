@@ -39,7 +39,8 @@
 					<td>${e.email}</td>
 					<td>${e.contact}</td>
 					<td>${e.address}</td>
-					
+					<td><a href="edit" class="btn btn-primary">Edit</a></td>
+					<td><a href="deletecustomer?id=${e.id}" class="btn btn-danger">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>

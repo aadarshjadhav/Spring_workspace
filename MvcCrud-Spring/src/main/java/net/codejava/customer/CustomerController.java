@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -28,13 +29,20 @@ public class CustomerController {
 		return "redirect:/showcustomerslist";
 	}
 	
-	@RequestMapping("/addcustomer")
-	public String addCustomerform()
-	{
-		return "addcustomer";
-	}
 	
-
+	@RequestMapping("/addcustomer")
+	  public String addCustomer(Model model) {
+	      model.addAttribute("customer", new Customer());
+	      return "addcustomer";
+	  }
+	
+	@RequestMapping("/deletecustomer")
+	  public String deleteCustomer(@RequestParam int id) {
+		customerservice.delete(id);
+	      return "redirect:/showcustomerslist";
+	  }
+	
+	
 	@RequestMapping(value="/save",method=RequestMethod.POST)
 	public String registerCustomer(@ModelAttribute("customer") Customer cus) {
 		
