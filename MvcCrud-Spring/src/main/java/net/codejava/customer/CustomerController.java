@@ -16,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class CustomerController {
 	
-//	ArrayList<Customer> list= new ArrayList<>();
 
 	@Autowired
 	private CustomerService customerservice;
@@ -55,31 +54,5 @@ public class CustomerController {
          mv.addObject("clist",custlist);
       return mv;
     }
-	
-	
-//	@RequestMapping("/showcustomerslist")
-//	public String showCustomers()
-//	{
-//	//	return  new ModelAndView("showcustomers","list",list);
-//		return  "showcustomers";
-//
-//	}
-	
 
-
-//	@RequestMapping(value="/save",method=RequestMethod.POST)
-//	public String registerCustomer(@ModelAttribute Customer cus) {
-//		
-//		
-//		System.out.println("Customer Saved"+cus);
-		// list.add(cus);
-//		System.out.println("customer"+cus);
-//		model.addAttribute("cus",cus);
-		
-//		System.out.println("list:"+list);
-//		model.addAttribute("list",list);
-//		
-//		
-//		return "addcustomer";
-//	}
 }
