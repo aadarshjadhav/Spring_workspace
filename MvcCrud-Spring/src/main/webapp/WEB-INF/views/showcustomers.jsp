@@ -24,8 +24,16 @@
 <p>Cus age : ${cus.age }</p>
 <p>Cus Mail : ${cus.email }</p>
  -->
+ 
+<form action="showcustomerslist" method="GET">
+    <div class="input-group mb-3">
+        <input class="form-control me-2" type="search" name="searchId" placeholder="Search" aria-label="Search">
+        <button  class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+</form>
 
 	<div class="container mt-5">
+	
 		<table class="table">
 			<tr>
 				<th>Id</th>

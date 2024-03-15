@@ -66,13 +66,45 @@ public class CustomerController {
 		return "redirect:/showcustomerslist";
 	}
 	
-	@RequestMapping("/showcustomerslist")
-    public ModelAndView showCustomer() {
-         List<Customer> custlist= customerservice.listAll();
-         ModelAndView mv= new ModelAndView();
-         mv.setViewName("showcustomers");
-         mv.addObject("clist",custlist);
-      return mv;
-    }
+//	@RequestMapping("searchById")
+//    public ModelAndView searchById(@RequestParam int custId) {
+//      Customer cust = customerservice.get(custId);
+//      ModelAndView mv = new ModelAndView();
+//      mv.setViewName("showcustomer");
+//      mv.addObject("customer", cust);
+//      return mv;
+//    }
+	
+	 @RequestMapping("/showcustomerslist")
+	    public ModelAndView showCustomer(@RequestParam(required = false) Integer searchId) {
+	        List<Customer> custlist=null;
+	        
+	        if (searchId != null) 
+	        {
+	            //if searchId is provided, retrieve only the customer with that ID
+	        	int temp_id=(int)searchId;
+	            
+	        	if(temp_id !=0)
+	        	{
+		        	Customer searchedCustomer = customerservice.get(temp_id);
+		            
+		            System.out.println("searchedCustomer"+searchedCustomer);
+		    
+	                custlist = new ArrayList<>();
+	                custlist.add(searchedCustomer);
+	        	}
+	           
+	        } 
+	        else 
+	        {
+	            // If searchId is not provided, retrieve all customers
+	            custlist = customerservice.listAll();
+	        }
+
+	        ModelAndView mv = new ModelAndView();
+	        mv.setViewName("showcustomers");
+	        mv.addObject("clist", custlist);
+	        return mv;
+	    }
 
 }
