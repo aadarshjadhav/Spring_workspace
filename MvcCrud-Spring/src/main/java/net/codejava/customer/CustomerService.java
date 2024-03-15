@@ -15,6 +15,7 @@ public class CustomerService {
 	public void save(Customer customer)
 	{
 		repo.save(customer);
+	
 	}
 	
 	public List<Customer> listAll(){
@@ -31,4 +32,6 @@ public class CustomerService {
 	{
 		repo.deleteById(id);
 	}
+	
+	
 }

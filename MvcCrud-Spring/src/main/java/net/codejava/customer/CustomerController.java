@@ -36,6 +36,18 @@ public class CustomerController {
 	      return "addcustomer";
 	  }
 	
+	@RequestMapping("/edit")
+	  public ModelAndView updateCustomer(@RequestParam int id) {
+		Customer cus=customerservice.get(id);
+		System.out.println("cus"+cus);
+		
+		ModelAndView mv= new ModelAndView();
+        mv.setViewName("updatecustomer");
+        mv.addObject("customer",cus);
+        return mv;
+
+	  }
+	
 	@RequestMapping("/deletecustomer")
 	  public String deleteCustomer(@RequestParam int id) {
 		customerservice.delete(id);

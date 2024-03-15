@@ -28,6 +28,7 @@
 	<div class="container mt-5">
 		<table class="table">
 			<tr>
+				<th>Id</th>
 				<th>Name</th>
 				<th>Email</th>
 				<th>Contact</th>
@@ -35,11 +36,12 @@
 			</tr>
 			<c:forEach items="${clist}" var="e">
 				<tr>
+					<td>${e.id}</td>
 					<td>${e.name}</td>
 					<td>${e.email}</td>
 					<td>${e.contact}</td>
 					<td>${e.address}</td>
-					<td><a href="edit" class="btn btn-primary">Edit</a></td>
+					<td><a href="edit?id=${e.id}" class="btn btn-primary">Edit</a></td>
 					<td><a href="deletecustomer?id=${e.id}" class="btn btn-danger">Delete</a></td>
 				</tr>
 			</c:forEach>

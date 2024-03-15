@@ -5,30 +5,41 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-  rel="stylesheet">
-  
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-  footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #f8f9fa; 
-            padding: 10px 0;
-            text-align: center;
-        }
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    #content {
+      min-height: 100%;
+      /* Flex container for the whole page */
+      display: flex;
+      flex-direction: column;
+    }
+    #content > footer {
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
 
-<footer class="container bg-body-tertiary text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2020 Copyright: All rights and fights reserved!
-    <a class="text-body" href="#">Created by </a>
-  </div>
-  <!-- Copyright -->
-</footer>
+<div id="content">
+  <!-- Page content goes here -->
+  
+  <footer class="bg-body-tertiary text-center">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
+
 </body>
 </html>
