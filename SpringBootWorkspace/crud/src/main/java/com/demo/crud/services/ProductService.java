@@ -45,18 +45,20 @@ public class ProductService implements IProductService{
 	@Override
     public Product searchProductById(int id) {
         
-		@SuppressWarnings("deprecation")
-        Product product = productrepo.getById(id);
-        return mapToDTO(product);
+//		@SuppressWarnings("deprecation")
+        Product product = productrepo.findById(id).get();
+        
+        return product;
     }
 
-    private Product mapToDTO(Product product) {
-        Product p = new Product();
-        p.setId(product.getId());
-        p.setName(product.getName());
-        p.setPrice(product.getPrice());
-        p.setDescription(product.getDescription());
-        return p;
-    }
+//    private Product mapToDTO(Product product) {
+//        Product p = new Product();
+//        p.setId(product.getId());
+//        p.setName(product.getName());
+//        p.setPrice(product.getPrice());
+//        p.setDescription(product.getDescription());
+//        p.setImg_link(product.getImg_link());
+//        return p;
+//    }
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.demo.crud.iservice.IProductService;
 import com.demo.crud.models.Product;
 
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/product")
 public class CrudController {
@@ -80,9 +82,17 @@ public class CrudController {
 	
 
 	@GetMapping("/searchProductById/{id}")
-    public ResponseEntity<Product> searchProductById(@PathVariable int id) {
-        Product product = productservice.searchProductById(id);
-        return ResponseEntity.ok(product);
+    public Product searchProductById(@PathVariable int id) {
+		Product res=null;
+		try 
+		{
+			res=productservice.searchProductById(id);
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex.getMessage());
+		}
+		return res;
     }
 	
 
